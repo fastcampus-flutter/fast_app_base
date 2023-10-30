@@ -1,7 +1,8 @@
+import 'package:flutter/material.dart';
+
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/theme/custom_theme_app.dart';
 import 'package:fast_app_base/screen/main/s_main.dart';
-import 'package:flutter/material.dart';
 
 import 'common/theme/custom_theme.dart';
 
@@ -63,6 +64,8 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
         break;
       case AppLifecycleState.detached:
         break;
+      case AppLifecycleState.hidden:
+        // TODO: Handle this case.
     }
     super.didChangeAppLifecycleState(state);
   }
