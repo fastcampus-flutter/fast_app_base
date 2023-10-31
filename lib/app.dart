@@ -1,3 +1,4 @@
+import 'package:fast_app_base/screen/spash/s_splash.dart';
 import 'package:flutter/material.dart';
 
 import 'package:fast_app_base/common/common.dart';
@@ -8,6 +9,7 @@ import 'common/theme/custom_theme.dart';
 
 class App extends StatefulWidget {
   static final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+
   ///light, dark 테마가 준비되었고, 시스템 테마를 따라가게 하려면 해당 필드를 제거 하시면 됩니다.
   static const defaultTheme = CustomTheme.light;
   static bool isForeground = true;
@@ -45,7 +47,7 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
           locale: context.locale,
           title: 'Image Finder',
           theme: context.themeType.themeData,
-          home: const MainScreen(),
+          home: const SplashScreen(),
         );
       }),
     );
@@ -65,7 +67,7 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
       case AppLifecycleState.detached:
         break;
       case AppLifecycleState.hidden:
-        // TODO: Handle this case.
+      // TODO: Handle this case.
     }
     super.didChangeAppLifecycleState(state);
   }

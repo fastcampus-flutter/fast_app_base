@@ -1,15 +1,34 @@
+import 'package:fast_app_base/common/cli_common.dart';
+import 'package:fast_app_base/common/common.dart';
+import 'package:fast_app_base/screen/main/s_main.dart';
 import 'package:flutter/material.dart';
 
-class SplshScreen extends StatefulWidget {
-  const SplshScreen({super.key});
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplshScreen> createState() => _SplshScreenState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplshScreenState extends State<SplshScreen> {
+class _SplashScreenState extends State<SplashScreen> {
+
+  @override
+  void initState() {
+    delay((){
+      Nav.clearAllAndPush(const MainScreen());
+    },1500.ms);
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Center(
+      child: Image.asset(
+        "assets/image/splash/splash.png",
+        width: 192,
+        height: 192,
+      ),
+    );
   }
 }
