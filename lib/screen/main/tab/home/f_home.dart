@@ -1,6 +1,7 @@
 import 'package:fast_app_base/common/cli_common.dart';
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
+import 'package:fast_app_base/common/widget/w_rounded_container.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
 import 'package:fast_app_base/screen/main/s_main.dart';
 import 'package:fast_app_base/screen/main/tab/home/banks_accounts_dummy.dart';
@@ -36,7 +37,16 @@ class HomeFragment extends StatelessWidget {
                   BigButton("토스뱅크", onTap: () {
                     context.showSnackbar("토스뱅크를 눌렀어요!!");
                   }),
-                  ...bankAccounts.map((e) => BankAccountWidget(e)).toList(),
+                  height10,
+                  RoundedContainer(
+                      child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      "자산".text.bold.white.make(),
+                      height5,
+                      ...bankAccounts.map((e) => BankAccountWidget(e)).toList(),
+                    ],
+                  )),
                 ],
               ).pSymmetric(h: 20),
             ),
