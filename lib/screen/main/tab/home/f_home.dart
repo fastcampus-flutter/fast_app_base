@@ -1,3 +1,4 @@
+import 'package:fast_app_base/common/cli_common.dart';
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/widget/w_big_button.dart';
 import 'package:fast_app_base/screen/dialog/d_message.dart';
@@ -20,16 +21,22 @@ class HomeFragment extends StatelessWidget {
       color: Colors.black,
       child: Stack(
         children: [
-          SingleChildScrollView(
-            padding: const EdgeInsets.only(top: 60),
-            child: Column(
-              children: [
-                BigButton("토스뱅크", onTap: () {
-                  context.showSnackbar("토스뱅크를 눌렀어요!!");
-                }),
-                ...bankAccounts.map((e) => BankAccountWidget(e)).toList(),
-              ],
-            ).pSymmetric(h: 20),
+          RefreshIndicator(
+            onRefresh: () async {
+              await sleepAsync(500.ms);
+            },
+            edgeOffset: TtossAppBar.appBarHeight,
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.only(top: TtossAppBar.appBarHeight),
+              child: Column(
+                children: [
+                  BigButton("토스뱅크", onTap: () {
+                    context.showSnackbar("토스뱅크를 눌렀어요!!");
+                  }),
+                  ...bankAccounts.map((e) => BankAccountWidget(e)).toList(),
+                ],
+              ).pSymmetric(h: 20),
+            ),
           ),
           const TtossAppBar(),
         ],
