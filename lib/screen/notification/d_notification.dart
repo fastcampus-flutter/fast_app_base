@@ -25,8 +25,8 @@ class _NotificationDialogState extends DialogState<NotificationDialog> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           ...widget.notifications
-              .map((Element) => NotificationItemWidget(
-                    notification: Element,
+              .map((element) => NotificationItemWidget(
+                    notification: element,
                     onTap: () {
                       widget.hide();
                     },
