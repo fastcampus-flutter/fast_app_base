@@ -25,7 +25,8 @@ class _BenefitFragmentState extends State<BenefitFragment> {
           height30,
           "혜택 더 받기".text.white.bold.size(16).make(),
           ...benefitList
-              .map((element) => BenefitItem(benefit: element)).toList(),
+              .map((element) => BenefitItem(benefit: element))
+              .toList(),
         ],
       ).pSymmetric(h: 10),
     );
