@@ -27,12 +27,14 @@ final bankAccountKakao = BankAccount(
   700000,
   accountTypeName: "입출금통장",
 );
-
+// 데이터 호출 되는지 테스트
 main() {
-  print(
-      bankAccounts[0].accountTypeName); // I/flutter (16802): 신한 주거래 우대통장(저축예금)
+  for (final item in bankAccounts) {
+    print(item.accountTypeName);
+  }
 }
 
+// List
 final bankAccounts = [
   bankAccountShinhan1,
   bankAccountShinhan2,
