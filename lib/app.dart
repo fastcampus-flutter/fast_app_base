@@ -1,7 +1,6 @@
 import 'package:fast_app_base/common/common.dart';
 import 'package:fast_app_base/common/theme/custom_theme_app.dart';
 import 'package:fast_app_base/screen/main/s_main.dart';
-import 'package:fast_app_base/screen/splash/s_splash.dart';
 import 'package:flutter/material.dart';
 
 import 'common/theme/custom_theme.dart';
@@ -46,7 +45,7 @@ class AppState extends State<App> with Nav, WidgetsBindingObserver {
           locale: context.locale,
           title: 'Image Finder',
           theme: context.themeType.themeData,
-          home: const SplashScreen(),
+          home: const MainScreen(),
         );
       }),
     );
