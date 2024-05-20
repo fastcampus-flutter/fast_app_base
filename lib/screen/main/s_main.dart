@@ -16,7 +16,13 @@ class MainScreen extends StatefulWidget {
 
 class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMixin, AfterLayoutMixin {
   TabItem _currentTab = TabItem.home;
-  final tabs = [TabItem.home, TabItem.favorite];
+  final tabs = [TabItem.home,
+    TabItem.benefit,
+    TabItem.tosspay,
+    TabItem.stock,
+    TabItem.all
+  ];
+
   final List<GlobalKey<NavigatorState>> navigatorKeys = [];
 
   int get _currentIndex => tabs.indexOf(_currentTab);
@@ -69,12 +75,12 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
       index: _currentIndex,
       children: tabs
           .mapIndexed((tab, index) => Offstage(
-                offstage: _currentTab != tab,
-                child: TabNavigator(
-                  navigatorKey: navigatorKeys[index],
-                  tabItem: tab,
-                ),
-              ))
+        offstage: _currentTab != tab,
+        child: TabNavigator(
+          navigatorKey: navigatorKeys[index],
+          tabItem: tab,
+        ),
+      ))
           .toList());
 
   void _handleBackPressed(bool didPop) {
@@ -120,10 +126,10 @@ class MainScreenState extends State<MainScreen> with SingleTickerProviderStateMi
     return tabs
         .mapIndexed(
           (tab, index) => tab.toNavigationBarItem(
-            context,
-            isActivated: _currentIndex == index,
-          ),
-        )
+        context,
+        isActivated: _currentIndex == index,
+      ),
+    )
         .toList();
   }
 
