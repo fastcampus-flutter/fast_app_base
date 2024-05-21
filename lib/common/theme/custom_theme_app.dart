@@ -1,6 +1,6 @@
+import 'package:fast_app_base/app.dart';
 import 'package:flutter/material.dart';
 
-import '../../app.dart';
 import '../data/preference/prefs.dart';
 import 'custom_theme.dart';
 import 'custom_theme_holder.dart';
