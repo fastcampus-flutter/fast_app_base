@@ -2,7 +2,7 @@ PODS:
   - Flutter (1.0.0)
   - flutter_native_splash (2.4.3):
     - Flutter
-  - keyboard_utils_fork (0.0.1):
+  - keyboard_utils_plugin (0.0.1):
     - Flutter
   - path_provider_foundation (0.0.1):
     - Flutter
@@ -17,7 +17,7 @@ PODS:
 DEPENDENCIES:
   - Flutter (from `Flutter`)
   - flutter_native_splash (from `.symlinks/plugins/flutter_native_splash/ios`)
-  - keyboard_utils_fork (from `.symlinks/plugins/keyboard_utils_fork/ios`)
+  - keyboard_utils_plugin (from `.symlinks/plugins/keyboard_utils_plugin/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
   - sqflite_darwin (from `.symlinks/plugins/sqflite_darwin/darwin`)
@@ -27,8 +27,8 @@ EXTERNAL SOURCES:
     :path: Flutter
   flutter_native_splash:
     :path: ".symlinks/plugins/flutter_native_splash/ios"
-  keyboard_utils_fork:
-    :path: ".symlinks/plugins/keyboard_utils_fork/ios"
+  keyboard_utils_plugin:
+    :path: ".symlinks/plugins/keyboard_utils_plugin/ios"
   path_provider_foundation:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   shared_preferences_foundation:
@@ -37,13 +37,13 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/sqflite_darwin/darwin"
 
 SPEC CHECKSUMS:
-  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  flutter_native_splash: df59bb2e1421aa0282cb2e95618af4dcb0c56c29
-  keyboard_utils_fork: 9822a78c5ad41829e7918ddfb58fd82ec70ba8e3
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
-  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
-  sqflite_darwin: 5a7236e3b501866c1c9befc6771dfd73ffb8702d
+  Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_native_splash: c32d145d68aeda5502d5f543ee38c192065986cf
+  keyboard_utils_plugin: 5d6c7e09a5b219ccd5ca1e044599fc00c153acc6
+  path_provider_foundation: bb55f6dbba17d0dccd6737fe6f7f34fbd0376880
+  shared_preferences_foundation: 7036424c3d8ec98dfe75ff1667cb0cd531ec82bb
+  sqflite_darwin: 20b2a3a3b70e43edae938624ce550a3cbf66a3d0
 
 PODFILE CHECKSUM: c4c93c5f6502fe2754f48404d3594bf779584011
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.16.2

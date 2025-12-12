@@ -818,7 +818,7 @@
     "isDirectDependency": false
   },
   {
-    "name": "keyboard_utils_fork",
+    "name": "keyboard_utils_plugin",
     "description": "fork from https://github.com/IsaiasSantana/keyboard_utils",
     "homepage": "https://github.com/hello-coder-xu/keyboard_utils.git",
     "repository": null,

@@ -63,10 +63,7 @@ dependencies:
   cached_network_image: ^3.2.3
 
   #ui - util
-  keyboard_utils_fork:
-    git:
-      url: https://github.com/BansookNam/keyboard_utils
-      ref: version/flutter_3.29.2
+  keyboard_utils_plugin: ^1.1.1
 
   #network
   dio: ^5.0.0

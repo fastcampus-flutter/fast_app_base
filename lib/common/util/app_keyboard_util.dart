@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:keyboard_utils_fork/keyboard_listener.dart' as k;
-import 'package:keyboard_utils_fork/keyboard_utils.dart';
+import 'package:keyboard_utils_plugin/keyboard_listener.dart' as k;
+import 'package:keyboard_utils_plugin/keyboard_utils.dart';
 
 class AppKeyboardUtil {
   static void hide(BuildContext context) {
@@ -39,7 +39,8 @@ mixin KeyboardDetector<T extends StatefulWidget> on State<T> {
   }
 
   initKeyboardDetector(
-      {final Function(double)? willShowKeyboard, final Function()? willHideKeyboard}) {
+      {final Function(double)? willShowKeyboard,
+      final Function()? willHideKeyboard}) {
     subscribingId = keyboardUtils.add(
         listener: k.KeyboardListener(willHideKeyboard: () {
       if (willHideKeyboard != null) {
